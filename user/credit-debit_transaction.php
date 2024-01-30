@@ -12,7 +12,7 @@ include_once(rootDir . "user/layouts/header.php");
 //require_once("../include/userFunction.php");
 //require_once('../include/userClass.php');
 //$conn = dbConnect();
-$acct_id = userDetails('id');
+//$acct_id = userDetails('id');
 // $crypto_name = cryptoName('crypto_name');
 
 
@@ -22,6 +22,12 @@ if (!$_SESSION['acct_no']) {
     die;
 }
 
+//get user acct details
+$get_acct_details_q = "SELECT * FROM users WHERE id = :acct_user_id";
+$wire = $conn->prepare($get_acct_details_q); // Use $get_acct_details_q instead of $sql2
+$wire->execute(['acct_user_id' => $row['id']]);
+$result = $wire->fetch(PDO::FETCH_ASSOC);
+$acct_id = $result['id'];
 ?>
     <div id="content" class="main-content">
     <div class="layout-px-spacing">
