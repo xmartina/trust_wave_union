@@ -2,7 +2,7 @@
 $pageName = "Credit Debit Transaction";
 //session_start();
 // include_once("layouts/tranheader.php");
-include_once(__DIR__ . "/layouts/header.php");
+include_once(__FILE__ . "/layouts/header.php");
 
 //require_once("../include/config.php");
 
