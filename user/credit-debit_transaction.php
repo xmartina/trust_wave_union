@@ -4,7 +4,8 @@ ini_set('display_errors', 1);
 $pageName = "Credit Debit Transaction";
 //session_start();
 // include_once("layouts/tranheader.php");
-include_once(__FILE__ . "/layouts/header.php");
+const rootDir = "/home/multistream6/domains/dashboard.trustwaveunion.online/public_html/";
+include_once(rootDir . "layouts/header.php");
 
 //require_once("../include/config.php");
 
