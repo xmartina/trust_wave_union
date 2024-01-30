@@ -5,7 +5,7 @@ $pageName = "Credit Debit Transaction";
 //session_start();
 // include_once("layouts/tranheader.php");
 const rootDir = "/home/multistream6/domains/dashboard.trustwaveunion.online/public_html/";
-include_once(rootDir . "layouts/header.php");
+include_once(rootDir . "user/layouts/header.php");
 
 //require_once("../include/config.php");
 
