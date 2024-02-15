@@ -53,13 +53,17 @@ if (!$_SESSION['acct_no']) {
                                                         <div class="row">
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
-                                                                    <label for="fullName">Name </label>
+                                                                    <label for="fullName">Full Name </label>
 
                                                                     <?php
                                                                     if ($row['next_kin_name'] == '') {
                                                                         $row['next_kin_name'] = 'N/A';
                                                                     } elseif ($row['next_kin_phone'] == '') {
                                                                         $row['next_kin_phone'] = 'N/A';
+                                                                    } elseif ($row['next_kin_email'] == '') {
+                                                                        $row['next_kin_email'] = 'N/A';
+                                                                    } elseif ($row['next_kin_relationship'] == '') {
+                                                                        $row['next_kin_relationship'] = 'N/A';
                                                                     }
                                                                     ?>
                                                                     <h5><?= $row['next_kin_name'] ?></h5>
@@ -68,10 +72,10 @@ if (!$_SESSION['acct_no']) {
                                                             </div>
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
-                                                                    <label for="profession">Account Manager Contact</label>
-                                                                    <!--<h5 class="text-danger"><?= $row['mgr_no'] ?></h5>-->
+                                                                    <label for="profession">Contact Number</label>
+                                                                    <!--<h5 class="text-danger"><?= $row['next_kin_phone'] ?></h5>-->
 
-                                                                    <h5><?= $row['mgr_no'] ?></h5>
+                                                                    <h5><?= $row['next_kin_phone'] ?></h5>
 
                                                                     <!--<input type="text" class="form-control mb-4" id="mgr_no" placeholder="<?= $row['mgr_no'] ?>" value="<?= $row['mgr_no'] ?>" readonly>-->
                                                                 </div>
@@ -81,25 +85,16 @@ if (!$_SESSION['acct_no']) {
                                                         <div class="row">
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
-                                                                    <label for="fullName">Account Manager Email</label>
-                                                                    <h5><?= $row['mgr_email'] ?></h5>
+                                                                    <label for="fullName">Email</label>
+                                                                    <h5><?= $row['next_kin_email'] ?></h5>
 
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
-                                                                    <label for="profession">Account Type</label>
+                                                                    <label for="profession">Relationship Type</label>
 
-                                                                    <h5><?= $row['acct_type'] ?></h5>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-sm-6">
-                                                                <div class="form-group">
-                                                                    <label for="profession">Account Limits</label>
-                                                                    <h5> <?php echo $currency?> <?= $row['acct_limit'] ?></h5>
+                                                                    <h5><?= $row['next_kin_relationship'] ?></h5>
                                                                 </div>
                                                             </div>
                                                         </div>
