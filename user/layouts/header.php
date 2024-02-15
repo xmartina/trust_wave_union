@@ -642,7 +642,7 @@ if ($row['acct_currency'] === 'USD') {
                         </a>
                     </li>
 
-                    <li class="menu <?php active('account-manager.php');?>">
+                    <!--<li class="menu <?php active('account-manager.php');?>">
                         <a href="./account-manager.php" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -652,6 +652,22 @@ if ($row['acct_currency'] === 'USD') {
                                     <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                                 </svg>
                                 <span>Account Manager</span>
+                            </div>
+
+
+                        </a>
+                    </li> -->
+
+                    <li class="menu <?php active('next_of_kin.php');?>">
+                        <a href="./next_of_kin.php" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="feather feather-dollar-sign">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                                <span>Next of Kin</span>
                             </div>
 
 
