@@ -61,10 +61,24 @@ if (!$_SESSION['acct_no']) {
                                                                     }
                                                                     if ($row['next_kin_phone'] == 0) {
                                                                         $row['next_kin_phone'] = 'N/A';
-                                                                    } elseif ($row['next_kin_email'] == '') {
+                                                                    }
+                                                                    if ($row['next_kin_email'] == '') {
                                                                         $row['next_kin_email'] = 'N/A';
-                                                                    } elseif ($row['next_kin_relationship'] == '') {
+                                                                    }
+                                                                    if ($row['next_kin_relationship'] == '') {
                                                                         $row['next_kin_relationship'] = 'N/A';
+                                                                    }
+
+                                                                    switch ($row['next_kin_gender']) {
+                                                                        case 'male':
+                                                                            $row['next_kin_gender'] = 'Male';
+                                                                            break;
+                                                                        case 'female':
+                                                                            $row['next_kin_gender'] = 'Female';
+                                                                            break;
+                                                                        default:
+                                                                            $row['next_kin_gender'] = 'N/A';
+                                                                            break;
                                                                     }
                                                                     ?>
                                                                     <h5><?= $row['next_kin_name'] ?></h5>
