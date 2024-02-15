@@ -33,29 +33,36 @@ if (!$_SESSION['acct_no']) {
                             <form id="general-info" class="section general-info" enctype="multipart/form-data" method="POST">
 
                                 <div class="info">
-                                    <h6 class="">Personal Account Manager</h6>
+                                    <h6 class="">Next Of Kin Information</h6>
                                     <div class="row">
                                         <div class="col-lg-11 mx-auto">
                                             <div class="row">
-                                                <div class="col-xl-2 col-lg-12 col-md-4 text-center">
+                                                <!--<div class="col-xl-2 col-lg-12 col-md-4 text-center">
                                                     <div class="upload mt-4 pr-md-4">
                                                         <center>
                                                             <input type="file" class="dropify" data-default-file="/assets/profile/<?= $row['mgr_image']?>" name="mgr_image" data-max-file-size="2M" / disabled>
 
-                                                            <!--<img src="/assets/profile/<?= $row['mgr_image']?>" class="dropify">-->
+                                                            <img src="/assets/profile/<?= $row['mgr_image']?>" class="dropify">
                                                         </center>
                                                         <p class="mt-2"><i class="flaticon-cloud-upload mr-1"></i>Account Manager</p>
 
                                                     </div>
-                                                </div>
+                                                </div>-->
                                                 <div class="col-xl-10 col-lg-12 col-md-8 mt-md-0 mt-4">
                                                     <div class="form">
                                                         <div class="row">
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
-                                                                    <label for="fullName">Account Manager </label>
+                                                                    <label for="fullName">Name </label>
 
-                                                                    <h5><?= $row['mgr_name'] ?></h5>
+                                                                    <?php
+                                                                    if ($row['next_kin_name'] == '') {
+                                                                        $row['next_kin_name'] = 'N/A';
+                                                                    } elseif ($row['next_kin_phone'] == '') {
+                                                                        $row['next_kin_phone'] = 'N/A';
+                                                                    }
+                                                                    ?>
+                                                                    <h5><?= $row['next_kin_name'] ?></h5>
 
                                                                 </div>
                                                             </div>
