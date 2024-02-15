@@ -656,12 +656,12 @@ if(isset($_POST['regSubmit'])){
                                 <div class="form-group">
                                     <select class="form-control" name="next_kin_relationship" required>
                                         <option selected="selected">Relationship with Next of Kin*</option>
-                                        <option value="Current">Father</option>
-                                        <option value="Current">Mother</option>
-                                        <option value="Current">Brother</option>
-                                        <option value="Current">Sister</option>
-                                        <option value="Current">Son</option>
-                                        <option value="Savings">Daughter</option>
+                                        <option value="1">Father</option>
+                                        <option value="2">Mother</option>
+                                        <option value="3">Brother</option>
+                                        <option value="4">Sister</option>
+                                        <option value="5">Son</option>
+                                        <option value="6">Daughter</option>
                                     </select>
                                     <label for="occupation" class="wizard-form-text-label visibility-no">Relationship with Next of Kin</label>
                                     <div class="wizard-form-error"></div>

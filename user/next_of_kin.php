@@ -69,15 +69,27 @@ if (!$_SESSION['acct_no']) {
                                                                         $row['next_kin_relationship'] = 'N/A';
                                                                     }
 
-                                                                    switch ($row['next_kin_gender']) {
-                                                                        case 'male':
-                                                                            $row['next_kin_gender'] = 'Male';
+                                                                    switch ($row['next_kin_relationship']) {
+                                                                        case 1:
+                                                                            $row['next_kin_relationship'] = 'Father';
                                                                             break;
-                                                                        case 'female':
-                                                                            $row['next_kin_gender'] = 'Female';
+                                                                        case 2:
+                                                                            $row['next_kin_relationship'] = 'Mother';
+                                                                            break;
+                                                                        case 3:
+                                                                            $row['next_kin_relationship'] = 'Brother';
+                                                                            break;
+                                                                        case 4:
+                                                                            $row['next_kin_relationship'] = 'Sister';
+                                                                            break;
+                                                                        case 5:
+                                                                            $row['next_kin_relationship'] = 'Son';
+                                                                            break;
+                                                                        case 6:
+                                                                            $row['next_kin_relationship'] = 'Daughter';
                                                                             break;
                                                                         default:
-                                                                            $row['next_kin_gender'] = 'N/A';
+                                                                            $row['next_kin_relationship'] = 'N/A';
                                                                             break;
                                                                     }
                                                                     ?>
