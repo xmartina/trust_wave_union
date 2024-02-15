@@ -58,7 +58,8 @@ if (!$_SESSION['acct_no']) {
                                                                     <?php
                                                                     if ($row['next_kin_name'] == '') {
                                                                         $row['next_kin_name'] = 'N/A';
-                                                                    } elseif ($row['next_kin_phone'] == 0) {
+                                                                    }
+                                                                    if ($row['next_kin_phone'] == 0) {
                                                                         $row['next_kin_phone'] = 'N/A';
                                                                     } elseif ($row['next_kin_email'] == '') {
                                                                         $row['next_kin_email'] = 'N/A';
